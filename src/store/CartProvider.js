@@ -29,13 +29,7 @@ const cartReducerFn = (state, action) => {
         };
     }
     if(action.type==='REMOVE'){
-        state.items=state.items.filter(item=>item.id !== action.id);
-        state.totalAmount = state.totalAmount - action.item.price * action.item.amount;
-        return {
-            items: state.items,
-            totalAmount: state.totalAmount,
-     }
-
+      
     }
     return defaultCartState;
 }
