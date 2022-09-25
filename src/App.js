@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Layouts/Header";
 import Meals from "./components/Meals/Meals";
@@ -11,13 +11,15 @@ function App() {
     setShowCart((prevstate) => !prevstate);
   };
   return (
-    <CartProvider> {showCart && <Cart showCartHandler={showCartHandler}></Cart>}
+    <CartProvider>
+      {showCart && <Cart showCartHandler={showCartHandler} />}
       <Header showCartHandler={showCartHandler} />
       <main>
         <Meals />
       </main>
     </CartProvider>
   );
+
 }
 
 export default App;
